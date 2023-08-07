@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: linear-gradient(#FDFFFC, #7387AB);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: sans-serif;
+  padding: 0 10vw;
+}
+
+.container-main{
+  height: 90vh;
+  position: relative;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.30);
+  width: 80vw;
+  border-radius: 12px;
+}
+
+h1{
+  padding: 10px;
+}
+
+.add-domain{
+  padding: 15px;;
+  width: 200px;
+  border-radius: 20px;
+  border: 1px solid #AAB2B6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-domain, .main-form{
+  background-color: #E6EAEF;
+  margin-top: 10px;
+}
+
+.main-form{
+  border-radius: 20px 0 0 0;
+}
+
+.add-domain img{
+  width: 30px;
+  margin: 0 5px;
+}
+
+.add-domain-link{
+  margin-top: 2px;
+  color: black;
+}
+
+.add-domain-link:hover{
+  color: #1B264F;
+}
+
+.form-head{
+  padding: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
+.form-middle, .form-head, .form-body{
+  border: 1px solid #AAB2B6;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-form button{
+  width: 35px;
+  height: 35px;
+  border: none;
+  border: 1px solid #AAB2B6;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.form-head img{
+  width: 25px;
+}
+
+.form-middle{
+  border-top: none;
+  font-weight: 500;
+  font-size: 0.8em;
+  color: grey;
+}
+
+.form-body{
+  border-top: none;
+}
+
+.form-body a{
+  color: black;
+  padding: 5px 15px;
+}
+
+.delete:hover{
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.btn-color{
+  background-color:rgba(255, 255, 255, 0.30);
+  padding: 2px;
+}
+
+.btn-color:hover{
+  background-color: rgba(255, 255, 255, 0.50);
+}
+
+.modal-title{
+  padding: 20px 20px 10px 30px;
+  text-align: center;
+}
+
+.delete:checked{
+  border: 1px solid #AAB2B6;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__list {
+  display: flex;
+  list-style-type: none;  
+}
+
+.pagination__item {
+  padding: 8px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.pagination__item--active {
+  font-weight: 800;
+  color: gold;
+}
