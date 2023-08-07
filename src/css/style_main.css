@@ -137,12 +137,12 @@ h1{
 }
 
 .pagination__item {
-  padding: 8px;
-  margin: 8px;
+  padding: 4px;
+  margin: 6px;
   cursor: pointer;
 }
 
 .pagination__item--active {
-  font-weight: 800;
-  color: gold;
+  font-weight: 600;
+  color: black;
 }
