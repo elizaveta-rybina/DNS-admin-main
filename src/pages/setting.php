@@ -13,7 +13,7 @@
 
 <body>
   <div class="container-main">
-    <h1 class="page-title" id="domain-title">Настройка DNS домена <span class="alert alert-info">ЗАГРУЗКА...</span></h1>
+    <h1 class="page-title" id="domain-title">Настройка DNS домена <span class="alert alert-info">.</span></h1>
     <div class="main-form">
       <div class="form-head">
         <h3>Список DNS-записей</h3>
@@ -180,25 +180,6 @@
       </div>
     </div>
   </div>
-  <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
   <script type="text/javascript" src="/javascript/jquery-3.7.0.min.js"></script>
   <script type="text/javascript" src="/javascript/popper.min.js"></script>
   <script type="text/javascript" src="/javascript/bootstrap.min.js"></script>

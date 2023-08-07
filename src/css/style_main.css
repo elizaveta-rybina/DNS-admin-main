@@ -14,6 +14,8 @@ body{
 }
 
 .container-main{
+  display: flex;
+  flex-direction: column;
   height: 90vh;
   position: relative;
   padding: 30px;
@@ -41,6 +43,7 @@ h1{
 }
 
 .main-form{
+  flex-direction: 1 1 auto;
   border-radius: 20px 0 0 0;
 }
 
@@ -67,7 +70,7 @@ h1{
   border: 1px solid #AAB2B6;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 9px;
 }
 
 .buttons{
@@ -132,17 +135,24 @@ h1{
 }
 
 .pagination__list {
+  bottom: 0;
   display: flex;
   list-style-type: none;  
 }
 
 .pagination__item {
+
   padding: 4px;
-  margin: 6px;
+  margin: 3px;
   cursor: pointer;
 }
 
 .pagination__item--active {
   font-weight: 600;
   color: black;
+}
+
+.navigator{
+  position: absolute;
+  bottom: 0;
 }

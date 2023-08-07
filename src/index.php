@@ -25,7 +25,9 @@
       <div class="form-middle">Домены и поддомены</div>
       <div id="domains"></div>
     </div>
-    <div class="pagination"></div>
+    <div class="pagination">
+      <div class="navigator"></div>
+    </div>
   </div>
 
   <form class="modal fade" id="exampleModalDomen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -60,10 +62,9 @@
   <script type="text/javascript" src="/javascript/jquery-3.7.0.min.js"></script>
   <script type="text/javascript" src="/javascript/popper.min.js"></script>
   <script type="text/javascript" src="/javascript/bootstrap.min.js"></script>
-
-  <!-- <script type="text/javascript" src="/javascript/add/domain.js"></script>
-  <script type="text/javascript" src="/javascript/get/domains.js"></script> -->
-  <script type="text/javascript" src="/javascript/paginationDomain.js"></script>
+  <script type="text/javascript" src="/javascript/add/domain.js"></script>
+  <script type="text/javascript" src="/javascript/get/domains.js"></script>
+  <script type="text/javascript" src="/javascript/pagination/domain.js"></script>
 
 </body>
 

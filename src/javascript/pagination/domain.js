@@ -18,18 +18,20 @@ async function main() {
     const postsEl = document.querySelector("#domains");
     postsEl.innerHTML = "";
     page--;
+    
     const start = rowPerPage * page;
     const end = start + rowPerPage;
     const paginatedData = arrData.slice(start, end);
+
     $.getScript("../javascript/frames/domains.js", function () {
       paginatedData.forEach((element) => {
-        $("#domains").append(domainHelper([{ name: element.name }]));
+        $("#domains").append(domainHelper(element));
       });
     });
   }
 
   function displayPagination(arrData, rowPerPage) {
-    const paginationEl = document.querySelector(".pagination");
+    const paginationEl = document.querySelector(".pagination .navigator");
     const pagesCount = Math.ceil(arrData.length / rowPerPage);
     const ulEl = document.createElement("ul");
     ulEl.classList.add("pagination__list");
