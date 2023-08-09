@@ -14,6 +14,12 @@
 
 <body>
   <div class="container-main">
+    <div class="returnDomains">
+      <img src="../image/left.png">
+      <form action="../index.php" class="returnDomainText">
+        <button>Вернуться обратно к доменам</button>
+      </form>
+    </div>
     <h1 class="page-title" id="domain-title">Настройка DNS домена <span class="alert alert-info">.</span></h1>
     <div class="main-form">
       <div class="form-head">

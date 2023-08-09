@@ -17,6 +17,7 @@ function domainHelper(responce) {
 					<form class="deleteDomain">
 						<input type="hidden" name="domainid" value="${domain.id}">
 						<button type="submit">
+							<a href="#" class="delete-domain-link" data-toggle="modal" data-target="#domainDeleteModal" ></a>
 							<img src="image/delete.png" />
 						</button>
 					</form>
@@ -24,6 +25,7 @@ function domainHelper(responce) {
 			</div>
 		`);
 	});
+	
 	return wrapper;
 }
 

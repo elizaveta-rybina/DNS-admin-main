@@ -64,24 +64,24 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Удаление домена</h5>
+          <h6 class="modal-title" id="exampleModalLabel">Вы уверены, что хотите удалить домен?</h6>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <!-- <div class="modal-body">
           <p>Вы уверены, что хотите удалить домен?</p>
           <input id="domainDelete" class="form-control" type="text" name="Domen">
-        </div>
+        </div> -->
         <div class="modalError">
           <p id="error" hidden></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Отменить
+            Нет
           </button>
-          <button type="sumbit" class="btn btn-primary" id="DomenButton">
-            Добавить
+          <button type="sumbit" class="btn btn-primary" id="deleteDomain">
+            Да
           </button>
         </div>
       </div>

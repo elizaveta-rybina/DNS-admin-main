@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$('#domainDeleteModal').submit(function(event) {
 		event.preventDefault();
 		
-		var input = $('#domainDelete').val();
+		var input = $('#deleteDomain').val();
 		$.ajax({
 			type: 'GET',
 			url: '../php/delete/domain.php',

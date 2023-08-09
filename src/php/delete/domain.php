@@ -1,7 +1,8 @@
 <?php
 require_once "../dataBase.php";
-$domain_name = $_REQUEST['domain_name'];
+$domainid = $_REQUEST['domainid'];
 
-$stmt = $connection->prepare("DELETE FROM `domains` WHERE domain_name = $domain_name");
-$data = array($domain_name);
-$stmt->execute($data);
+
+$stmt = $connection->prepare("DELETE FROM `domains` WHERE `domains`.`id` = $domainid");
+$stmt->execute();
+

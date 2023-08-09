@@ -84,8 +84,13 @@ h1{
 }
 
 .dropdown button{
+  float: right;
   background-color: #7387AB;
   border: #7387AB;
+}
+
+.btn-group{
+  display: none;
 }
 
 .alert,.alert-info{
@@ -104,9 +109,37 @@ h1{
   display: none;
 }
 
+.returnDomains{
+  padding: 0px 5px;
+  color: gray;
+  width: 250px;
+  border-radius: 7px;
+  border: 1px solid #AAB2B6;
+  display: flex;
+  justify-content: space-between;
+  background-color: #F0F2F5;
+}
+
+.returnDomainText button{
+  height: 15px;
+  font-size: 15px;
+  color: #5c5959;
+  border: none;
+}
+
+.returnDomains img{
+  width: 15px;
+  height: 15px;
+  margin: 5px 5px;
+}
+
 @media (max-width: 600px) {
   .big{
     display: none;
+  }
+
+  .btn-group{
+    display: block;
   }
 
   .small{
