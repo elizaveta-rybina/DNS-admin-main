@@ -94,5 +94,67 @@ h1{
   text-decoration: underline;
   border: 0px;
   padding: 0;
+}
 
+.small{
+  display: none;
+}
+
+.dropdown-menu1{
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .big{
+    display: none;
+  }
+
+  .small{
+    background-color: #7387AB;
+    border: #7387AB;
+    display: block;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h3{
+    font-size: 15px;
+  }
+
+  .form-middle{
+    padding: 2px;
+  }
+
+  .form-body{
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-body button{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .buttons{
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-body img{
+    width: 15px;
+    height: 15px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+  }
+
+  .form-body a, .form-body span{
+    font-size: 15px;
+    padding: 5px;
+    margin: 0;
+  }
 }

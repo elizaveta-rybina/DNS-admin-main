@@ -3,13 +3,15 @@ async function getData() {
     type: "GET",
     url: "../php/get/domains.php",
     dataType: "html",
-    success: function (response) {},
+    success: function (response) {
+      
+    },
   });
 }
 
 async function main() {
-  const postsData = await getData();
-  const arr = JSON.parse(postsData);
+   const postsData = await getData();
+   const arr = JSON.parse(postsData);
 
   let currentPage = 1;
   let rows = 7;
@@ -25,7 +27,7 @@ async function main() {
 
     $.getScript("../javascript/frames/domains.js", function () {
       paginatedData.forEach((element) => {
-        $("#domains").append(domainHelper(element));
+        $("#domains").append(domainHelper([{ name: element.name }]));
       });
     });
   }
@@ -63,7 +65,7 @@ async function main() {
     return liEl;
   }
 
-  displayList(arr, rows, currentPage);
+  
   displayPagination(arr, rows);
 }
 

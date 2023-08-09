@@ -1,10 +1,10 @@
 'use strict';
 
-$(document).ready(function add() {
-	$('#exampleModalDomen').submit(function(event) {
+$(document).ready(function() {
+	$('#exampleModalDomain').submit(function(event) {
 		event.preventDefault();
 		
-		var input = $('#domenInput').val();
+		var input = $('#domainInput').val();
 		$.ajax({
 			type: 'GET',
 			url: '../php/add/domain.php',

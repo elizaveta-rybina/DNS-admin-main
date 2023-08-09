@@ -156,3 +156,42 @@ h1{
   position: absolute;
   bottom: 0;
 }
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  .form-middle{
+    padding: 5px;
+  }
+  
+  .form-body button{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  .buttons{
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-body img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+  }
+
+  .form-body a, .form-body span{
+    font-size: 15px;
+    padding: 5px;
+    margin: 0;
+  }
+}
