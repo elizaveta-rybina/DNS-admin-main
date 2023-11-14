@@ -1,7 +1,9 @@
 "use strict";
 
-function domainHelper(responce) {
-	let wrapper = $('<div class="form-wrapper"></div>');
+export function domainHelper(responce) {
+
+	var wrapper = $('<div class="form-wrapper"></div>');
+	
 	responce.forEach((domain) => {
 		wrapper.append(`
 			<div class="form-body">
@@ -27,6 +29,3 @@ function domainHelper(responce) {
 	
 	return wrapper;
 }
-
-// <a href="?del=<?=${domain.id}?>"></a>
-//class="delete-domain-link" data-toggle="modal" data-target="#exampleDomainDelete"
