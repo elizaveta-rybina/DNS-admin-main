@@ -8,7 +8,7 @@ function domainHelper(responce) {
 				<p>${domain.name}</p>
 				<div class="buttons">
 					<button class="adding"><img src="image/add.png" /></button>
-					<form action="pages/setting.php">
+					<form action="pages/setting.html">
 						<input type="hidden" name="domainid" value="${domain.id}">
 						<button type="submit">
 							<img src="image/setting.png" />
@@ -17,7 +17,6 @@ function domainHelper(responce) {
 					<form class="deleteDomain">
 						<input type="hidden" name="domainid" value="${domain.id}">
 						<button type="submit">
-							<a href="#" class="delete-domain-link" data-toggle="modal" data-target="#domainDeleteModal" ></a>
 							<img src="image/delete.png" />
 						</button>
 					</form>
