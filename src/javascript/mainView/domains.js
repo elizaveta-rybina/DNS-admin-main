@@ -7,6 +7,6 @@ $(document).ready(function() {
 	getDomain(
 		function(response) 
 		{
-			$('#domains').append(domainHelper(response));
+			$('#domains').prepend(domainHelper(response));
 		});
 });

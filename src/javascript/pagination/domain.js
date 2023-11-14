@@ -9,6 +9,8 @@ async function getData() {
   });
 }
 
+import { domainHelper } from "../frames/domains.js";
+
 async function main() {
    const postsData = await getData();
    const arr = JSON.parse(postsData);
@@ -25,10 +27,8 @@ async function main() {
     const end = start + rowPerPage;
     const paginatedData = arrData.slice(start, end);
 
-    $.getScript("../javascript/frames/domains.js", function () {
-      paginatedData.forEach((element) => {
+    paginatedData.forEach((element) => {
         $("#domains").append(domainHelper([{ name: element.name }]));
-      });
     });
   }
 
