@@ -1,7 +1,9 @@
 "use strict";
 
-function aHelper(responce, domainName) {
+export function aHelper(responce, domainName) {
+
 	let wrapper = $('<div class="form-wrapper"></div>');
+
 	responce.forEach((row) => {
 		wrapper.append(`
 			<div class="form-body">
@@ -15,6 +17,6 @@ function aHelper(responce, domainName) {
 			</div>
 		`);
 	});
-	console.dir(wrapper);
+
 	return wrapper;
 }
