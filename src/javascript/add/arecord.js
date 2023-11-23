@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$('#exampleModalARecord').submit(function(event) {
 		let domainid = new URL(window.location.href).searchParams.get("domainid");
 		event.preventDefault();
-		
+
 		$.ajax({
 			type: 'GET',
 			url: '../php/get/domainName.php',
