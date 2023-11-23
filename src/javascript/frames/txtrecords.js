@@ -1,6 +1,6 @@
 "use strict";
 
-export function mxHelper(responce, domainName) {
+export function txtHelper(responce, domainName) {
 
 	let wrapper = $('<div class="form-wrapper"></div>');
 
@@ -8,8 +8,8 @@ export function mxHelper(responce, domainName) {
 		wrapper.append(`
       <div class="form-body">
         <a href="http://${domainName}" target="_blank">${domainName}</a>
-        <span>MX</span>
-        <span>${row.priority}: ${row.value}</span>
+        <span>TXT</span>
+        <span>${row.text}</span>
         <div class="buttons">
           <button class="setting">
             <img src="/image/pencil.png">
