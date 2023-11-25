@@ -4,7 +4,7 @@ async function getData() {
     url: "../php/get/domains.php",
     dataType: "html",
     success: function (response) {
-      
+
     },
   });
 }
@@ -22,7 +22,7 @@ async function main() {
     const postsEl = document.querySelector("#domains");
     postsEl.innerHTML = "";
     page--;
-    
+
     const start = rowPerPage * page;
     const end = start + rowPerPage;
     const paginatedData = arrData.slice(start, end);
@@ -65,7 +65,7 @@ async function main() {
     return liEl;
   }
 
-  
+
   displayPagination(arr, rows);
 }
 

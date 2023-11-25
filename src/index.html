@@ -15,12 +15,30 @@
     <h1 class="page-title">Домены и поддомены</h1>
     <div class="add-domain">
       <img src="image/domain.png" alt="Icon" />
-      <a class="add-domain-link" href="#" data-toggle="modal" data-target="#exampleModalDomain">Добавить домен</a>
+      <a class="add-domain-link" href="#" data-toggle="modal" data-target="#AddDomain">Добавить домен</a>
     </div>
     <div class="main-form">
       <div class="form-head">
         <h3>Список доменов</h3>
-        <button><img src="image/find.png" /></button>
+        <div class="right-side">
+          <form class="search-box">
+            <div class="row">
+              <input name="inputBox" type="text" id="inputBox" placeholder="Поиск" autocomplete="off">
+              <button type="sumbit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="result-box">
+            </div>
+          </form>
+          <form>
+            <div class="sort">
+              <button id="sortByName" type="submit">
+                <i class="fa-solid fa-sort"></i>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
       <div class="form-middle">Домены и поддомены</div>
       <div id="domains"></div>
@@ -30,7 +48,7 @@
     </div>
   </div>
 
-  <form class="modal fade" id="exampleModalDomain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <form class="modal fade" id="AddDomain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -94,11 +112,16 @@
   <script type="text/javascript" src="/javascript/libs/popper.min.js"></script>
   <script type="text/javascript" src="/javascript/libs/bootstrap.min.js"></script>
 
-  <script type="text/javascript" src="/javascript/add/domain.js"></script>
   <script type="module" src="/javascript/mainView/domains.js"></script>
+
+  <script type="text/javascript" src="/javascript/autocomplete.js"></script>
+  <script type="module" src="/javascript/search/domain.js"></script>
+
   <script type="text/javascript" src="/javascript/delete/domain.js"></script>
 
-  
+  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

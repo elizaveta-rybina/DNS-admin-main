@@ -74,6 +74,7 @@ h1{
 }
 
 .buttons{
+  z-index: 1;
   display: flex;
   justify-content: space-between;
 }
@@ -137,11 +138,10 @@ h1{
 .pagination__list {
   bottom: 0;
   display: flex;
-  list-style-type: none;  
+  list-style-type: none;
 }
 
 .pagination__item {
-
   padding: 4px;
   margin: 3px;
   cursor: pointer;
@@ -161,6 +161,88 @@ h1{
   display: none;
 }
 
+.search-box{
+  z-index: 4;
+  height: 49px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px 10px 0 0;
+}
+
+.row{
+  position: relative;
+  z-index: 5;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  padding: 5px 19px;
+}
+
+.right-side button .fa-solid{
+  color: #1F1F1F;
+}
+
+.row input{
+  padding: 0 5px;
+  flex: 1;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  color: #1F1F1F;
+}
+
+.right-side button{
+  background-color: #EFEFEF;
+  border: 1px solid gray;
+  outline: 0;
+  margin: 0;
+}
+
+.row input::placeholder{
+  color: gray;
+  font-size: 16px;
+}
+
+.result-box{
+  z-index: 3;
+  position: relative;
+  background-color: white;
+  margin: 0;
+  border: 1px solid gray;
+}
+
+.result-box ul{
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  padding: 0 10px;
+  list-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #1F1F1F;
+  margin-bottom: 5px;
+}
+
+.result-box li{
+  background-color: white;
+  padding: 5px 0px;
+}
+
+.result-box ul li:hover{
+  background-color: #E6EAEF;
+}
+
+.right-side{
+  display: flex;
+  justify-content: space-around;
+}
+
+.sort{
+  position: relative;
+  margin: 7px 10px;
+}
+
 @media (max-width: 600px) {
   h1 {
     font-size: 25px;
@@ -173,7 +255,7 @@ h1{
   .form-middle{
     padding: 5px;
   }
-  
+
   .form-body button{
     width: 25px;
     height: 25px;
