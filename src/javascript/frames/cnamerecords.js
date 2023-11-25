@@ -1,6 +1,6 @@
 "use strict";
 
-export function aHelper(responce) {
+export function cnameHelper(responce) {
 
 	let wrapper = $('<div class="form-wrapper"></div>');
 
@@ -8,10 +8,10 @@ export function aHelper(responce) {
 		wrapper.append(`
 			<div class="form-body">
         <div class="type">
-          <span>A</span>
+          <span>CNAME</span>
         </div>
         <div class="value">
-          <p>IP: ${row.ip}</p>
+          <p>Текст: ${row.text}</p>
         </div>
         <div class="buttons">
           <button class="setting">

@@ -57,6 +57,28 @@ services:
       - frontend
       - backend
 
+  redis:
+    image: redis:alpine
+    container_name: redis
+    networks:
+      - backend
+
+  phpRedisAdmin:
+    image: erikdubbelboer/phpredisadmin
+    container_name: phpredisadmin
+    ports:
+      - 4000:80
+    depends_on:
+      - redis
+    environment:
+      - ADMIN_USER=admin
+      - ADMIN_PASS=admin
+      - REDIS_1_HOST=redis
+      - REDIS_1_PORT=6379
+    networks:
+      - frontend
+      - backend
+
 networks:
   frontend:
     name: php-app-frontend-network

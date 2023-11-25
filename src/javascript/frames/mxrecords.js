@@ -1,21 +1,25 @@
 "use strict";
 
-export function mxHelper(responce, domainName) {
+export function mxHelper(responce) {
 
 	let wrapper = $('<div class="form-wrapper"></div>');
 
 	responce.forEach((row) => {
 		wrapper.append(`
       <div class="form-body">
-        <a href="http://${domainName}" target="_blank">${domainName}</a>
-        <span>MX</span>
-        <span>${row.priority}: ${row.value}</span>
+        <div class="type">
+          <span>MX</span>
+        </div>
+        <div class="value">
+          <p>Приоритет: ${row.priority}</p>
+          <p>Значение: ${row.value}</p>
+        </div>
         <div class="buttons">
           <button class="setting">
-            <img src="/image/pencil.png">
+            <i class="fa-solid fa-pencil" style="color: #000000;"></i>
           </button>
           <button class="delete">
-            <img src="/image/delete.png">
+            <i class="fa-solid fa-trash" style="color: #000000;"></i>
           </button>
         </div>
       </div>

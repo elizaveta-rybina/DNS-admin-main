@@ -1,6 +1,6 @@
 "use strict";
 
-export function aHelper(responce) {
+export function a4Helper(responce) {
 
 	let wrapper = $('<div class="form-wrapper"></div>');
 
@@ -8,7 +8,7 @@ export function aHelper(responce) {
 		wrapper.append(`
 			<div class="form-body">
         <div class="type">
-          <span>A</span>
+          <span>AAAA</span>
         </div>
         <div class="value">
           <p>IP: ${row.ip}</p>

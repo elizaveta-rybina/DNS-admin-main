@@ -24,36 +24,37 @@
     <div class="main-form">
       <div class="form-head">
         <h3>Список DNS-записей</h3>
-
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle big" type="button" id="dropdownMenuButton"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Добавить запись
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalARecord">A</a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalMXRecord">MX</a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalSRVRecord">SRV</a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalCNameRecord">CNAME</a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalTXTRecord">TXT</a>
+        <div class="right-side">
+          <form class="search-box">
+            <div class="row">
+              <input name="inputBox" type="text" id="inputBox" placeholder="Поиск" autocomplete="off">
+              <button type="sumbit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="result-box">
+            </div>
+          </form>
+          <div class="sort">
+            <button class="sortByName">
+              <i class="fa-solid fa-sort"></i>
+            </button>
           </div>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-secondary btn-sm dropdown-toggle small" type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-           +
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalARecord">A</a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalMXRecord">MX</a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalSRVRecord">SRV</a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalCNameRecord">CNAME</a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalTXTRecord">TXT</a>
+          <div class="dropdown">
+            <button class="dropdown-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa-solid fa-plus" style="color: #000000;"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalARecord">A</a>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalMXRecord">MX</a>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalSRVRecord">SRV</a>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalCNameRecord">CNAME</a>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalTXTRecord">TXT</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="form-middle">
-        <span>Хост</span>
         <span>Тип</span>
         <span>Значение</span>
         <span>Настройки</span>
@@ -66,7 +67,8 @@
       </div>
     </div>
 
-    <!-- Modal ARecord-->
+    <!-- Modal ARecord
+    btn-secondary dropdown-toggle big-->
     <form class="modal fade" id="exampleModalARecord" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -155,6 +157,7 @@
         </div>
       </div>
     </form>
+    
     <!-- Modal CNameRecord-->
     <div class="modal fade" id="exampleModalCNameRecord" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
@@ -211,6 +214,8 @@
     <script type="text/javascript" src="/javascript/add/arecord.js"></script>
     <script type="text/javascript" src="/javascript/add/mxrecord.js"></script>
     <script type="module" src="/javascript/mainView/records.js"></script>
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 
 </body>
 
