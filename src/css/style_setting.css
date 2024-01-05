@@ -14,7 +14,6 @@ body{
 }
 
 .container-main{
-  height: 90vh;
   position: relative;
   padding: 30px;
   background: rgba(255, 255, 255, 0.30);

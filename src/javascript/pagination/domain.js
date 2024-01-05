@@ -1,4 +1,4 @@
-async function getData() {
+function getData() {
   return $.ajax({
     type: "GET",
     url: "../php/get/domains.php",
@@ -11,12 +11,12 @@ async function getData() {
 
 import { domainHelper } from "../frames/domains.js";
 
-async function main() {
-   const postsData = await getData();
-   const arr = JSON.parse(postsData);
+$(document).ready(function() {
+  const postsData = getData();
+  const arr = JSON.parse(postsData);
 
   let currentPage = 1;
-  let rows = 7;
+  let rows = 5;
 
   function displayList(arrData, rowPerPage, page) {
     const postsEl = document.querySelector("#domains");
@@ -64,9 +64,23 @@ async function main() {
 
     return liEl;
   }
-
-
   displayPagination(arr, rows);
-}
+})
 
-main();
+// function handlePaginationClick(new_page_index, pagination_container, countOfDomains) {
+//   getData(function(){
+//     $("#domains").append(domainHelper([{ name: element.name }]));
+//   });
+//   return false;
+//   // console.log(postsData);
+//   // const arr = JSON.parse(postsData.values);
+//   // for(var i in arr)
+//   //   $("#domains").append(domainHelper([{ name: element.name }]));
+//   // return false;
+// }
+
+// $("#domains").pagination(122, {
+//   items_per_page:7,
+//   callback:handlePaginationClick
+// }
+// );

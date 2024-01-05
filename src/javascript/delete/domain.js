@@ -3,7 +3,7 @@
 $(document).ready(function() {
 	$('#domainDeleteModal').submit(function(event) {
 		event.preventDefault();
-		
+
 		var input = $('#deleteDomain').val();
 		$.ajax({
 			type: 'GET',
@@ -17,3 +17,8 @@ $(document).ready(function() {
 		});
 	});
 });
+
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})

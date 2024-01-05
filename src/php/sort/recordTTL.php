@@ -1,10 +1,9 @@
 <?php
 require_once "../dataBase.php";
 
-$table = $_REQUEST['table'];
 $domainid = $_REQUEST['domainid'];
 
-$stmt = $connection->prepare("SELECT * FROM `{$table}` WHERE domainid = ?");
+$stmt = $connection->prepare("SELECT * FROM `srvrecord` WHERE domainid = ? ORDER BY TTL");
 $stmt->execute(array($domainid));
 $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo json_encode($records);

@@ -17,7 +17,7 @@ body{
 .container-main{
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: auto;
   position: relative;
   padding: 30px;
   background: rgba(255, 255, 255, 0.30);
@@ -29,16 +29,30 @@ h1{
   padding: 10px;
 }
 
-.add-domain{
+.container-head{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.add-domain, .infoForUsers{
   padding: 15px;;
   width: 200px;
   border-radius: 20px;
   border: 1px solid #AAB2B6;
-  display: flex;
+  display: block;
   justify-content: space-between;
 }
 
-.add-domain, .main-form{
+.infoForUsers{
+  margin: 0 15px;
+}
+
+.container-head .fa-solid{
+  width: 30px;
+  margin: 0px;
+}
+
+.add-domain, .main-form, .infoForUsers{
   background-color: #E6EAEF;
   margin-top: 10px;
 }
@@ -46,11 +60,6 @@ h1{
 .main-form{
   flex-direction: 1 1 auto;
   border-radius: 20px 0 0 0;
-}
-
-.add-domain img{
-  width: 30px;
-  margin: 0 5px;
 }
 
 .add-domain-link{

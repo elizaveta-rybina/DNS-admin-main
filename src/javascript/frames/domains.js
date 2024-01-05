@@ -15,12 +15,6 @@ export function domainHelper(responce) {
               <i class="fa-solid fa-gear" style="color: #000000;"></i>
 						</button>
 					</form>
-					<form class="deleteDomain">
-						<input type="hidden" name="domainid" value="${domain.id}">
-						<button type="submit">
-              <i class="fa-solid fa-trash" style="color: #000000;"></i>
-						</button>
-					</form>
 				</div>
 			</div>
 		`);
@@ -28,3 +22,10 @@ export function domainHelper(responce) {
 
 	return wrapper;
 }
+
+/* <form class="deleteDomain">
+						<input type="hidden" name="domainid" value="${domain.id}">
+						<button type="submit">
+              <i class="fa-solid fa-trash" style="color: #000000;"></i>
+						</button>
+					</form> */

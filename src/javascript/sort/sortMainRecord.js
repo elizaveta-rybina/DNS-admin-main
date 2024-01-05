@@ -2,20 +2,65 @@
 
 import { getDataSort } from '../get/sortGetRecords.js';
 import { getDataSortDesc } from '../get/sortGetRecords.js';
+import { getRecord } from '../get/records.js';
 
-import { domainHelper} from '../frames/domains.js';
+import { aHelper } from '../frames/arecords.js';
+import { mxHelper } from '../frames/mxrecords.js';
+import { txtHelper } from '../frames/txtrecords.js';
+import { a4Helper } from '../frames/a4records.js';
+import { srvHelper } from '../frames/srvrecords.js';
+import { cnameHelper } from '../frames/cnamerecords.js';
 
-const btn = document.getElementsByClassName("sortByName")[0];
+const btn = document.getElementsByClassName("sortByTTL")[0];
 
 $(document).ready(function(){
-  $(".sortByName").click(function(){
-    if (btn.classList == "sortByName"){
+  $(".sortByTTL").click(function(){
+    if (btn.classList == "sortByTTL"){
       getDataSort(
         function(response)
         {
-            $('#domains').html(domainHelper(response));
-            btn.classList.remove("sortByName");
-            btn.classList.add("sortByNameDesc");
+            $('#records').html(srvHelper(response));
+
+            getRecord(
+              function(response)
+              {
+                $('#records').append(aHelper(response));
+              },
+            'arecord');
+
+            //MXRecord
+            getRecord(
+              function(response)
+              {
+                $('#records').append(mxHelper(response));
+              },
+            'mxrecord');
+
+            //TXTRecord
+            getRecord(
+              function(response)
+              {
+                $('#records').append(txtHelper(response));
+              },
+            'txtrecord');
+
+            //A4Record
+            getRecord(
+              function(response)
+              {
+                $('#records').append(a4Helper(response));
+              },
+            'a4record');
+
+            //CNAMERecord
+            getRecord(
+              function(response)
+              {
+                $('#records').append(cnameHelper(response));
+              },
+            'cnamerecord');
+            btn.classList.remove("sortByTTL");
+            btn.classList.add("sortByTTLDesc");
         }
     );
     }
@@ -23,11 +68,50 @@ $(document).ready(function(){
       getDataSortDesc(
         function(response)
         {
-            $('#domains').html(domainHelper(response));
-            btn.classList.remove("sortByNameDesc");
-            btn.classList.add("sortByName");
+            $('#records').html(srvHelper(response));
+
+            getRecord(
+              function(response)
+              {
+                $('#records').append(aHelper(response));
+              },
+            'arecord');
+
+            //MXRecord
+            getRecord(
+              function(response)
+              {
+                $('#records').append(mxHelper(response));
+              },
+            'mxrecord');
+
+            //TXTRecord
+            getRecord(
+              function(response)
+              {
+                $('#records').append(txtHelper(response));
+              },
+            'txtrecord');
+
+            //A4Record
+            getRecord(
+              function(response)
+              {
+                $('#records').append(a4Helper(response));
+              },
+            'a4record');
+
+            //CNAMERecord
+            getRecord(
+              function(response)
+              {
+                $('#records').append(cnameHelper(response));
+              },
+            'cnamerecord');
+            btn.classList.remove("sortByTTLDesc");
+            btn.classList.add("sortByTTL");
         }
-      );
+    );
     }
   });
 });

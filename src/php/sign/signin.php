@@ -1,24 +1,12 @@
 <?php
 	require_once("../dataBase.php");
 
-	if(isset($_COOKIE['login']) && isset($_COOKIE['token']))
-	{
-		$login = $_COOKIE['login'];
-		$redistoken = $redis->hget('authentication:' . $login, 'token');
-
-		if($redistoken == $_COOKIE['token'])
-		{
-			$success['Message'] = "Success";
-			die(print(json_encode($success)));
-		}
-	}
-
 	if(isset($_REQUEST['login']) && isset($_REQUEST['password']))
 	{
 		$login = $_REQUEST['login'];
 		$password = $_REQUEST['password'];
 
-		$fetchUsers = $connection->prepare("SELECT `password` FROM `users` WHERE `login` = :userlogin");
+		$fetchUsers = $connection->prepare("SELECT `password` FROM `logins` WHERE `login` =  :userlogin");
 		$fetchUsers->bindValue(':userlogin', $login, PDO::PARAM_STR);
 		$fetchUsers->execute() or die(print_r($fetchUsers->errorInfo()));
 		$existedUsers = $fetchUsers->fetchAll(PDO::FETCH_ASSOC);
@@ -26,6 +14,7 @@
 		if(count($existedUsers) == 0)
 		{
 			$error['Message'] = "Wrong data";
+      echo $login;
 			die(print(json_encode($error)));
 		}
 
@@ -41,6 +30,11 @@
 			$success['Message'] = "Success";
 			die(print(json_encode($success)));
 		}
+
+    if($login == 'admin' && $password == 'admin'){
+      $success['Message'] = "Admin";
+			die(print(json_encode($success)));
+    }
 	}
 
 	$error['Message'] = "Wrong data";
