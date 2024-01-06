@@ -2,10 +2,6 @@
 
 namespace app\models;
 
-use Yii;
-use yii\behaviors\TimestampBehavior;
-use yii\helpers\ArrayHelper;
-
 /**
  * This is the model class for table "zone_item".
  *
@@ -19,21 +15,18 @@ use yii\helpers\ArrayHelper;
  * @property int $created_at
  * @property int $updated_at
  *
- * @property Zone $zone
+ * @property Zone
  */
-class ZoneItem extends ActiveRecord
+
+require_once 'Zone.php';
+
+class ZoneItem
 {
-    /**
-     * {@inheritdoc}
-     */
     public static function tableName()
     {
         return 'zone_item';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function rules()
     {
         return [
@@ -45,9 +38,6 @@ class ZoneItem extends ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
 
     /**
      * {@inheritdoc}
@@ -67,26 +57,7 @@ class ZoneItem extends ActiveRecord
         ];
     }
 
-    /**
-     * Gets query for [[Zone]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
-    public function getZone()
-    {
-        return $this->hasOne(Zone::className(), ['id' => 'zone_id']);
-    }
-
-    /**
-     * Gets query for [[Type]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
-    public function getType()
-    {
-        return $this->hasOne(Zone::className(), ['id' => 'type']);
-    }
-
+    //одна строка
     public static function loadFromString($line)
     {
         $item = new ZoneItem();

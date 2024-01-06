@@ -8,8 +8,8 @@
   <link type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link type="text/css" href="/css/bootstrap.min.css" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="/css/style_setting.css">
-  <link type="text/css" rel="stylesheet" href="/css/style_users.css">
+  <link type="text/css" rel="stylesheet" href="../css/style_setting.css">
+  <link type="text/css" rel="stylesheet" href="../css/style_users.css">
   <title>Document</title>
 </head>
 
@@ -76,17 +76,22 @@
           </div>
           <div class="modal-body">
             <p>Имя</p>
-            <input id="name" class="form-control" type="text">
+            <input id="name" class="form-control" name="name" type="text" required>
             <p>Фамилия</p>
-            <input id="LastName" class="form-control" type="text">
+            <input id="lastname" class="form-control" name="lastName" type="text" required>
             <p>Отчество</p>
-            <input id="FatherName" class="form-control" type="text">
+            <input id="fathername" class="form-control" name="FatherName" type="text" required>
             <p>Электронная почта</p>
-            <input id="email" class="form-control" type="email">
+            <input id="email" class="form-control" name="email" type="email" required>
             <p>Логин</p>
-            <input id="login" class="form-control" type="text">
+            <input id="login" class="form-control" name="login" type="text" required>
             <p>Пароль</p>
-            <button id="addUser-btn">Генерация пароля</button>
+            <div class="password-generate">
+              <input id="password" class="form-control" name="password" type="text" required>
+              <button id="addUser-btn">
+                <i class="fa-solid fa-key"></i>
+              </button>
+            </div>
           </div>
           <div class="modalError">
             <p id="error" hidden></p>
@@ -107,11 +112,10 @@
     <script type="text/javascript" src="/javascript/libs/popper.min.js"></script>
     <script type="text/javascript" src="/javascript/libs/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="/javascript/setting.js"></script>
-    <script type="text/javascript" src="/javascript/add/arecord.js"></script>
-    <script type="text/javascript" src="/javascript/add/mxrecord.js"></script>
-    <script type="module" src="/javascript/mainView/records.js"></script>
+    <script type="module" src="/javascript/randomPassword.js"></script>
     <script type="module" src="/javascript/mainView/users.js"></script>
+    <script type="module" src="/javascript/sign/signup.js"></script>
+
 
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 

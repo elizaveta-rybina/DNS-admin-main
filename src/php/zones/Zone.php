@@ -70,6 +70,15 @@ class Zone
         ];
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
 
     /**
      * Gets query for [[ZoneItems]].

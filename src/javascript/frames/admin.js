@@ -9,9 +9,9 @@ export function domainHelper(responce) {
 			<div class="form-body">
 				<p>${domain.name}</p>
 				<div class="buttons">
-          <form data-toggle="modal" data-target="#changeNameOfDomain">
+          <form class="changeNameOfDomain">
 						<input type="hidden" name="domainname" value="${domain.name}">
-						<button type="submit">
+						<button class="changeNameBtn" type="submit" data-toggle="modal" data-target="#changeNameOfDomain">
               <i class="fa fa-pencil" style="color: #000000;"></i>
 						</button>
 					</form>
@@ -21,9 +21,9 @@ export function domainHelper(responce) {
               <i class="fa-solid fa-gear" style="color: #000000;"></i>
 						</button>
 					</form>
-					<form data-toggle="modal" data-target="#domainDelete">
-						<input type="hidden" name="domainid" value="${domain.id}">
-						<button type="submit">
+					<form class="deleteDomainForm">
+						<input type="hidden" name="domainid">
+						<button type="submit" class="btnDelete" value="${domain.id}">
               <i class="fa-solid fa-trash" style="color: #000000;"></i>
 						</button>
 					</form>

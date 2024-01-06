@@ -35,9 +35,8 @@ h1{
 }
 
 .add-domain, .infoForUsers{
-  padding: 15px;;
-  width: 200px;
-  border-radius: 20px;
+  padding: 10px;
+  border-radius: 15px;
   border: 1px solid #AAB2B6;
   display: block;
   justify-content: space-between;
@@ -48,14 +47,15 @@ h1{
 }
 
 .container-head .fa-solid{
-  width: 30px;
-  margin: 0px;
+  margin: 0px 5px;
+  padding: 0 auto;
 }
 
 .add-domain, .main-form, .infoForUsers{
   background-color: #E6EAEF;
   margin-top: 10px;
 }
+
 
 .main-form{
   flex-direction: 1 1 auto;
