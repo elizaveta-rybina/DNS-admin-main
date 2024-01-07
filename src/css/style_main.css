@@ -42,6 +42,12 @@ h1{
   justify-content: space-between;
 }
 
+#changeNameInput{
+  padding: 2px;
+  margin: 5px 0;
+  width: 100%;
+}
+
 .infoForUsers{
   margin: 0 15px;
 }
