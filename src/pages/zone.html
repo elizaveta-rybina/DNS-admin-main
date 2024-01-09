@@ -60,6 +60,10 @@
         <div class="modal-body">
           <p>Выберите файл:</p>
           <input type="file" id="inpFile">
+          <div class="error-title" style="display: none;">Ошибка в файле зоны! Выберите другой файл, либо исправьте ошибку</div>
+          <div class="error"></div>
+          <div class="error-title">
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
@@ -69,122 +73,16 @@
     </div>
   </form>
 
-  <form class="modal fade" id="AddDomain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Добавление домена</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Название домена:</p>
-          <input id="domainInput" class="form-control" type="text" name="Domain">
-        </div>
-        <div class="modalError">
-          <p id="error" hidden></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Отменить
-          </button>
-          <button type="sumbit" class="btn btn-primary" id="DomenButton">
-            Добавить
-          </button>
-        </div>
-      </div>
-    </div>
-  </form>
-
-  <form class="modal fade" id="domainDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h6 class="modal-title" id="exampleModalLabel">Вы уверены, что хотите удалить домен?</h6>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modalError">
-          <p id="error" hidden></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Нет
-          </button>
-          <button type="sumbit" class="btn btn-primary" id="deleteDomain">
-            Да
-          </button>
-        </div>
-      </div>
-    </div>
-  </form>
-
-  <!-- Модальное окно -->
-  <div class="modal fade" id="changeNameOfDomain" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-        </div>
-        <div class="modal-body">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam porro dolorem architecto, tempora cum sunt, nobis illum eius repellendus ex iste quia vero deserunt aut aspernatur eveniet facilis aperiam non.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-          <button type="button" class="btn btn-primary">Сохранить изменения</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <form class="modal fade" id="changeNameOfDomain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Редактирование имени домена</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Название домена:</p>
-          <input id="domainInput" class="form-control" type="text" name="Domain">
-        </div>
-        <div class="modalError">
-          <p id="error" hidden></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Отменить
-          </button>
-          <button type="sumbit" class="btn btn-primary" id="changeNameButton">
-            Изменить
-          </button>
-        </div>
-      </div>
-    </div>
-  </form> -->
-
-
-
   <script type="text/javascript" src="../javascript/libs/jquery-3.7.0.min.js"></script>
   <script type="text/javascript" src="../javascript/libs/popper.min.js"></script>
   <script type="text/javascript" src="../javascript/libs/bootstrap.min.js"></script>
-
-  <script type="module" src="../javascript/mainView/adminDomains.js"></script>
 
   <script type="text/javascript" src="../javascript/autocomplete.js"></script>
   <script type="module" src="../javascript/search/domain.js"></script>
   <script type="module" src="/javascript/sort/sortMainDomain.js"></script>
 
-  <script type="text/javascript" src="../javascript/delete/domain.js"></script>
-  <script type="text/javascript" src="../javascript/zones/file.js"></script>
+  <script type="module" src="../javascript/zones/file.js"></script>
+  <script type="text/javascript" src="../javascript/zones/getDomain.js"></script>
 
   <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 

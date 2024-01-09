@@ -1,0 +1,30 @@
+; cPanel first:78.0.13 (update_time):1654518816 Cpanel::ZoneFile::VERSION:1.3 hostname:ns1.mrsu.ru latest:86.0.40
+; Zone file for 2man.site
+$TTL 14400
+2man.site.	86400	IN	SOA	ns1.mrsu.ru.	korovin.mrsu.ru.	(
+						2020083100 ;Serial Number
+						3600 ;refresh
+						1800 ;retry
+						1209600 ;expire
+						86400	)
+
+2man.site.	86400	IN	NS	ns1.mrsu.ru.
+2man.site.	86400	IN	NS	ns2.mrsu.ru.
+
+
+2man.site.	14400	IN	A	194.54.64.250
+
+2man.site.	14400	IN	MX	0	2man.site.
+
+mail	14400	IN	CNAME	2man.site.
+www	14400	IN	C?NAME	2man.site. ;ИСПРАВЬ ПОТОМ
+ftp	14400	IN	A	194.54.64.250
+2man.site.	14400	IN	TXT	"v=spf1 +a +mx +ip4:194.54.64.250 ~all"
+webdisk	14400	IN	A	194.54.64.250
+cpcalendars	14400	IN	A	194.54.64.250
+webmail	14400	IN	A	194.54.64.250
+cpanel	14400	IN	A	194.54.64.250
+cpcontacts	14400	IN	A	194.54.64.250
+whm	14400	IN	A	194.54.64.250
+default._domainkey	14400	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz5QX+tZ+UgcnaGos+64x9kwUW1BnkM5IOf3GJaFcVy4aUCO++Tawtv+WzMIjU9ILXyCkXmCQ6jRrUEJKdYsRuHyVnctSjZg4m0v++CHP5S2PfuQMnCYV8gGXmDSgEMFyd5GZ/3UAESlZ83IPYxk/ph84dA4qhkTAQY7zBKbk4qpmY0tTz1hGifwYEnvXbdEzK" wwEoWbymKVV5rCXUs1FSN39suOHQIzp7su5FHJNJiJrwcQCGpatUlZuEbbVQl351VpUakO0PwCHQeWRgDu2NxEFeKnIHKrQedEcRm3J62pvoiSfh4wI6pd7dU7Z5u85LeF0xk9XYJ0GXaF0UTehEwIDAQAB\;
+_cpanel-dcv-test-record	14400	IN	TXT	_cpanel-dcv-test-record=GLMi64nxM6kBwT0BRKBjmiDXz01GoERH2lKFlkUihTmVx63jYId89Renuj6KLtio

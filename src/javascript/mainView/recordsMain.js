@@ -2,12 +2,12 @@
 
 import { getRecord } from '../get/records.js';
 
-import { aHelper } from '../frames/arecords.js';
-import { mxHelper } from '../frames/mxrecords.js';
-import { txtHelper } from '../frames/txtrecords.js';
-import { a4Helper } from '../frames/a4records.js';
-import { srvHelper } from '../frames/srvrecords.js';
-import { cnameHelper } from '../frames/cnamerecords.js';
+import { aHelper } from '../framesMain/arecords.js';
+import { mxHelper } from '../framesMain/mxrecords.js';
+import { txtHelper } from '../framesMain/txtrecords.js';
+import { a4Helper } from '../framesMain/a4records.js';
+import { srvHelper } from '../framesMain/srvrecords.js';
+import { cnameHelper } from '../framesMain/cnamerecords.js';
 
 $(document).ready(function() {
   //ARecord

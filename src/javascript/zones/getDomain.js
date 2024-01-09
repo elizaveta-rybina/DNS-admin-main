@@ -1,4 +1,4 @@
-export function getDomain(callback) {
+function getDomain(callback) {
 	$.ajax({
 		type: "GET",
 		url: "../php/zones/get.php",
@@ -9,7 +9,7 @@ export function getDomain(callback) {
 	});
 };
 
-export function domainHelper(responce) {
+function domainHelper(responce) {
 	var wrapper = $('<div class="form-wrapper"></div>');
 	responce.forEach((domain) => {
 		wrapper.append(`
@@ -41,3 +41,13 @@ export function domainHelper(responce) {
 
 	return wrapper;
 }
+
+$(document).ready(function() {
+  $('#addFileZone').modal('hide');
+	getDomain(
+		function(response)
+		{
+			$('#domains').prepend(domainHelper(response));
+	  }
+  );
+});

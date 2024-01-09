@@ -13,14 +13,6 @@ export function aHelper(responce) {
         <div class="value">
           <p>IP: ${row.ip}</p>
         </div>
-        <div class="buttons">
-          <button class="setting">
-            <i class="fa-solid fa-pencil" style="color: #000000;"></i>
-          </button>
-          <button class="delete">
-            <i class="fa-solid fa-trash" style="color: #000000;"></i>
-          </button>
-        </div>
 			</div>
 		`);
 	});

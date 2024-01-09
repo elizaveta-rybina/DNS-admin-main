@@ -1,0 +1,29 @@
+; cPanel first:76.0.11 (update_time):1654518816 Cpanel::ZoneFile::VERSION:1.3 hostname:ns1.mrsu.ru latest:86.0.40
+; Zone file for agroservice.mrsu.ru
+$TTL 14400
+agroservice.mrsu.ru.	86400	IN	SOA	ns1.mrsu.ru.	korovin.mrsu.ru.	(
+						2018120402 ;Serial Number
+						3600 ;refresh
+						1800 ;retry
+						1209600 ;expire
+						86400	)
+
+agroservice.mrsu.ru.	86400	IN	NS	ns1.mrsu.ru.
+agroservice.mrsu.ru.	86400	IN	NS	ns2.mrsu.ru.
+
+
+agroservice.mrsu.ru.	14400	IN	A	194.54.64.250
+
+agroservice.mrsu.ru.	14400	IN	MX	0	agroservice.mrsu.ru.
+
+mail	14400	IN	CNAME	agroservice.mrsu.ru.
+www	14400	IN	CNAME	agroservice.mrsu.ru.
+ftp	14400	IN	A	194.54.64.250
+agroservice.mrsu.ru.	14400	IN	TXT	"v=spf1 +a +mx +ip4:194.54.64.250 ~all"
+webmail	14400	IN	A	194.54.64.250
+whm	14400	IN	A	194.54.64.250
+cpcalendars	14400	IN	A	194.54.64.250
+webdisk	14400	IN	A	194.54.64.250
+cpcontacts	14400	IN	A	194.54.64.250
+cpanel	14400	IN	A	194.54.64.250
+default._domainkey	14400	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwlyXKlYGastURH+PUuk0XacvBTiOBCc/oS1fQ3XoQN5SBtk513IcvSM4KsdvcA0967q+mJK2yEGMB5RGAVeOlRYO5olkXhdHoK5DKa5ydn4Y5XO9sV/7Q8TFfXPooaxUrawh2NcuYyCgE4gzvhhQeJevYjhbmk0j/hNDAn4iE0rO20eH/XL/L0JNpYI5Blt1l" 7u6nY/wR4PME7LAC6MUpi4nsZyavZgfEa4LH1p/XOnK79mBu0jPpBZkfxWbAGP8sjOvQy2J+4xNcx/FaXgcJpimQ8lxbVxCMpo33t4+uyGO6ME8QLECu2k99JK1JTXsccZ8njyVEb9rIR2PHWwOewIDAQAB\;

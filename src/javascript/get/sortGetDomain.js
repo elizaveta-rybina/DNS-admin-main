@@ -21,3 +21,25 @@ export function getDataSortDesc(callback) {
 		}
 	});
 }
+
+export function getDataZones(callback) {
+	$.ajax({
+		type: "GET",
+		url: "../php/sort/domainsZone.php",
+		dataType: "html",
+		success: function (response) {
+			callback(JSON.parse(response));
+		}
+	});
+}
+
+export function getDataSortZonesDesc(callback) {
+	$.ajax({
+		type: "GET",
+		url: "../php/sort/domainsZoneDesc.php",
+		dataType: "html",
+		success: function (response) {
+			callback(JSON.parse(response));
+		}
+	});
+}

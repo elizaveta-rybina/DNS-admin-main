@@ -1,0 +1,42 @@
+; cPanel first:11.30.0.32 (update_time):1458714838 Cpanel::ZoneFile::VERSION:1.3 hostname:ns1.mrsu.ru latest:11.54.0.21
+; Zone file for a.mrsu.ru
+$TTL 14400
+a.mrsu.ru.	86400	IN	SOA	ns1.mrsu.ru.	zaharov.mrsu.ru.	(
+						2016022606 ;Serial Number
+						86400 ;refresh
+						7200 ;retry
+						3600000 ;expire
+						86400	)
+; a.mrsu.ru.	86400	IN	SOA	ns1.mrsu.ru.	noc.mrsu.ru.	( ; Previous value removed by cPanel transfer auto-merge on 20160226114033 GMT
+; 						2014052302 ;Serial Number ; Previous value removed by cPanel transfer auto-merge on 20160226114033 GMT
+; 						86400 ;refresh ; Previous value removed by cPanel transfer auto-merge on 20160226114033 GMT
+; 						7200 ;retry ; Previous value removed by cPanel transfer auto-merge on 20160226114033 GMT
+; 						3600000 ;expire ; Previous value removed by cPanel transfer auto-merge on 20160226114033 GMT
+; 						86400 ;minimum ; Previous value removed by cPanel transfer auto-merge on 20160226114033 GMT
+; 	) ; Previous value removed by cPanel transfer auto-merge on 20160226114033 GMT
+a.mrsu.ru.	86400	IN	NS	ns1.mrsu.ru.
+a.mrsu.ru.	86400	IN	NS	ns2.mrsu.ru.
+a.mrsu.ru.	14400	IN	A	194.54.66.250
+localhost	14400	IN	A	127.0.0.1
+a.mrsu.ru.	14400	IN	MX	0	a.mrsu.ru.
+mail	14400	IN	CNAME	a.mrsu.ru.
+www	14400	IN	CNAME	a.mrsu.ru.
+ftp	14400	IN	A	194.54.66.250
+; ftp	14400	IN	A	194.54.64.250 ; Previous value removed by cPanel transfer auto-merge on 20160226114033 GMT
+cpanel	14400	IN	A	194.54.66.250
+whm	14400	IN	A	194.54.66.250
+webmail	14400	IN	A	194.54.66.250
+webdisk	14400	IN	A	194.54.66.250
+autoconfig	14400	IN	A	194.54.66.250
+autodiscover	14400	IN	A	194.54.66.250
+_autodiscover._tcp 14400 IN SRV 0 0 443 cpanelemaildiscovery.cpanel.net.
+cpcalendars IN A 194.54.66.250
+_caldav._tcp IN SRV 0 0 2079 whm.mrsu.ru.
+_caldavs._tcp IN SRV 0 0 2080 whm.mrsu.ru.
+_carddav._tcp IN SRV 0 0 2079 whm.mrsu.ru.
+_carddavs._tcp IN SRV 0 0 2080 whm.mrsu.ru.
+_caldav._tcp IN TXT path=/
+_caldavs._tcp IN TXT path=/
+_carddav._tcp IN TXT path=/
+_carddavs._tcp IN TXT path=/
+cpcontacts IN A 194.54.66.250

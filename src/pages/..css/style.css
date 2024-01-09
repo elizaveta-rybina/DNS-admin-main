@@ -9,9 +9,8 @@ body{
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  display: flex;
   font-family: sans-serif;
-  padding: 0 10vw;
+  padding: 100px 10vw;
 }
 
 .container-main{
@@ -60,6 +59,45 @@ h1{
 .add-domain, .main-form, .infoForUsers{
   background-color: #E6EAEF;
   margin-top: 10px;
+}
+
+.personalName {
+  background-color: #E6EAEF; /* белая подложка */
+  border-radius: 10px; /* закругление углов */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* тень */
+  padding: 20px; /* отступы внутри блока */
+}
+
+.returnDomains{
+  padding: 0px 5px;
+  color: gray;
+  width: 180px;
+  border-radius: 7px;
+  border: 1px solid #AAB2B6;
+  display: flex;
+  justify-content: space-between;
+  background-color: #F0F2F5;
+}
+
+.returnDomainText button{
+  height: 15px;
+  font-size: 15px;
+  color: #5c5959;
+  border: none;
+}
+
+.returnDomains img{
+  width: 15px;
+  height: 15px;
+  margin: 5px 5px;
+}
+
+.personalName p {
+  margin: 10px 0; /* отступы между параграфами */
+}
+
+.personalName span {
+  font-weight: bold; /* увеличение жирности для текста в теге span */
 }
 
 .personalSpace{

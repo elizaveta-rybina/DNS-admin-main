@@ -1,0 +1,79 @@
+; cPanel first:11.34.0.9 (update_time):1612599979 Cpanel::ZoneFile::VERSION:1.3 hostname:ns1.mrsu.ru latest:86.0.36
+; Zone file for appmath.mrsu.ru
+$TTL 14400
+appmath.mrsu.ru.	86400	IN	SOA	ns1.mrsu.ru.	den.mrsu.ru.	(
+						2021020600 ;Serial Number
+						86400 ;refresh
+						7200 ;retry
+						3600000 ;expire
+						86400	)
+
+appmath.mrsu.ru.	86400	IN	NS	ns1.mrsu.ru.
+appmath.mrsu.ru.	86400	IN	NS	ns2.mrsu.ru.
+
+
+appmath.mrsu.ru.	14400	IN	A	194.54.66.250
+
+localhost	14400	IN	A	127.0.0.1
+
+appmath.mrsu.ru.	14400	IN	MX	0	appmath.mrsu.ru.
+
+mail	14400	IN	CNAME	appmath.mrsu.ru.
+www	14400	IN	CNAME	appmath.mrsu.ru.
+ftp	14400	IN	A	194.54.66.250
+cpanel	14400	IN	A	194.54.66.250
+whm	14400	IN	A	194.54.66.250
+webmail	14400	IN	A	194.54.66.250
+webdisk	14400	IN	A	194.54.66.250
+autoconfig	14400	IN	A	194.54.66.250
+autodiscover	14400	IN	A	194.54.66.250
+_autodiscover._tcp	14400	IN	SRV	0	0	443	cpanelemaildiscovery.cpanel.net.
+dev	14400	IN	A	194.54.66.250
+www.dev	14400	IN	A	194.54.66.250
+autodiscover.dev	14400	IN	A	194.54.66.250
+_autodiscover._tcp.dev	14400	IN	SRV	0	0	443	cpanelemaildiscovery.cpanel.net.
+autoconfig.dev	14400	IN	A	194.54.66.250
+webdisk.dev	14400	IN	A	194.54.66.250
+
+elres	14400	IN	A	194.54.66.250
+www.elres	14400	IN	A	194.54.66.250
+autoconfig.elres	14400	IN	A	194.54.66.250
+autodiscover.elres	14400	IN	A	194.54.66.250
+_autodiscover._tcp.elres	14400	IN	SRV	0	0	443	cpanelemaildiscovery.cpanel.net.
+webdisk.elres	14400	IN	A	194.54.66.250
+cpcalendars	14400	IN	A	194.54.66.250
+_caldav._tcp	14400	IN	SRV	0	0	2079	whm.mrsu.ru.
+_caldavs._tcp	14400	IN	SRV	0	0	2080	whm.mrsu.ru.
+_carddav._tcp	14400	IN	SRV	0	0	2079	whm.mrsu.ru.
+_carddavs._tcp	14400	IN	SRV	0	0	2080	whm.mrsu.ru.
+_caldav._tcp	14400	IN	TXT	path=/
+_caldavs._tcp	14400	IN	TXT	path=/
+_carddav._tcp	14400	IN	TXT	path=/
+_carddavs._tcp	14400	IN	TXT	path=/
+cpcontacts	14400	IN	A	194.54.66.250
+cpcalendars.elres	14400	IN	A	194.54.66.250
+_caldav._tcp.elres	14400	IN	SRV	0	0	2079	whm.mrsu.ru.
+_caldavs._tcp.elres	14400	IN	SRV	0	0	2080	whm.mrsu.ru.
+_carddav._tcp.elres	14400	IN	SRV	0	0	2079	whm.mrsu.ru.
+_carddavs._tcp.elres	14400	IN	SRV	0	0	2080	whm.mrsu.ru.
+_caldav._tcp.elres	14400	IN	TXT	path=/
+_caldavs._tcp.elres	14400	IN	TXT	path=/
+_carddav._tcp.elres	14400	IN	TXT	path=/
+_carddavs._tcp.elres	14400	IN	TXT	path=/
+cpcontacts.elres	14400	IN	A	194.54.66.250
+
+
+
+
+cpcalendars.dev	14400	IN	A	194.54.66.250
+_caldav._tcp.dev	14400	IN	SRV	0	0	2079	whm.mrsu.ru.
+_caldavs._tcp.dev	14400	IN	SRV	0	0	2080	whm.mrsu.ru.
+_carddav._tcp.dev	14400	IN	SRV	0	0	2079	whm.mrsu.ru.
+_carddavs._tcp.dev	14400	IN	SRV	0	0	2080	whm.mrsu.ru.
+_caldav._tcp.dev	14400	IN	TXT	path=/
+_caldavs._tcp.dev	14400	IN	TXT	path=/
+_carddav._tcp.dev	14400	IN	TXT	path=/
+_carddavs._tcp.dev	14400	IN	TXT	path=/
+cpcontacts.dev	14400	IN	A	194.54.66.250
+appmath.mrsu.ru.	86400	IN	TXT	google-site-verification=WePNGVXCUwCmtG8p0LICSWVmoG4Az2v1sBJj7b8MMWU
+
