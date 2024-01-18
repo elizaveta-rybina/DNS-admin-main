@@ -1,10 +1,10 @@
 'use strict';
 
-export function deleteDomain(callback, value){
+export function deleteRecords(callback, value, table){
   $.ajax({
     type: "GET",
-    url: "../php/delete/domain.php",
-    data: { id: value },
+    url: "../php/delete/records.php",
+    data: { table: table, id: value },
     success: function() {
       callback();
     },

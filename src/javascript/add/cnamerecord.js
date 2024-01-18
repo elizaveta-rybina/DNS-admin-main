@@ -1,7 +1,9 @@
 'use strict';
 
+import { cnameHelper } from "../frames/cnamerecords.js";
+
 $(document).ready(function() {
-	$('#exampleModalCNAMERecord').submit(function(event) {
+	$('#exampleModalCNameRecord').submit(function(event) {
 		let domainid = new URL(window.location.href).searchParams.get("domainid");
 		event.preventDefault();
 
@@ -14,10 +16,10 @@ $(document).ready(function() {
 				$.ajax({
 					type: 'GET',
 					url: '../php/add/cnamerecord.php',
-					data: { domainid: domainid, ip: input },
+					data: { domainid: domainid, text: input },
 					success: function () {
 						$.getScript("../javascript/frames/cnamerecords.js", function () {
-							$('#records').prepend(aHelper([{ip: input}], JSON.parse(domainName).name));
+							$('#records').prepend(cnameHelper([{text: input}], JSON.parse(domainName).name));
 						});
 					}
 				});

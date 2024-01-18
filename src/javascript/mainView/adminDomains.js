@@ -30,7 +30,6 @@ $(document).ready(function() {
       )
       $('#openDeleteModal').modal('hide');
     });
-
   })
 
   $('#domains').on('submit', '#changeNameOfDomainForm', function(e){

@@ -159,29 +159,31 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Служба:</p>
-            <input class="form-control" type="text" placeholder="Например, _sip">
-            <p>Протокол:</p>
-            <input class="form-control" type="text" placeholder="Например, _sip">
+            <p>Имя:</p>
+            <input class="form-control" type="text" id="SRVname">
             <p>Приоритет:</p>
-            <input class="form-control" type="text" placeholder="Например, 20">
+            <input class="form-control" type="text" id="SRVPriority">
+            <p>Вес:</p>
+            <input class="form-control" type="text" id="SRVWeight">
             <p>Порт:</p>
-            <input class="form-control" type="text" placeholder="Например, 5060">
+            <input class="form-control" type="text" id="SRVPort">
             <p>Хост:</p>
-            <input class="form-control" type="text" placeholder="Например, university.sever.ru">
+            <input class="form-control" type="text" id="SRVHost">
+            <p>Время жизни:</p>
+            <input class="form-control" type="text" id="SRVTTL">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">
               Отменить
             </button>
-            <button type="button" class="btn btn-primary sure" disabled="disabled">Добавить</button>
+            <button type="submit" class="btn btn-primary sure" id="TXTRecordButton">Добавить</button>
           </div>
         </div>
       </div>
     </form>
 
     <!-- Modal CNameRecord-->
-    <div class="modal fade" id="exampleModalCNameRecord" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <form class="modal fade" id="exampleModalCNameRecord" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -193,19 +195,20 @@
           </div>
           <div class="modal-body">
             <p>Значение: </p>
-            <input class="form-control" type="text" placeholder="">
+            <input class="form-control" type="text" placeholder="" id="CNAMERecordInput">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">
               Отменить
             </button>
-            <button type="button" class="btn btn-primary sure" disabled="disabled">Добавить</button>
+            <button type="submit" class="btn btn-primary sure">Добавить</button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
+
     <!-- Modal TXTRecord-->
-    <div class="modal fade" id="exampleModalTXTRecord" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <form class="modal fade" id="exampleModalTXTRecord" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -217,24 +220,48 @@
           </div>
           <div class="modal-body">
             <p>Значение: </p>
-            <input class="form-control" type="text" placeholder="">
+            <input class="form-control" type="text" placeholder="" id="TXTRecordInput">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary sure" disabled="disabled">Добавить</button>
+            <button type="submit" class="btn btn-primary sure">Добавить</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">
               Отменить
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
+
+    <form class="modal fade" id="deleteRecordFormA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteTitle">Удаление записи</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="nameOfDomain">Вы действительно хотите удалить данную запись?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
+            <button type="submit" class="btn btn-primary">Удалить</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
     <script type="text/javascript" src="/javascript/libs/jquery-3.7.0.min.js"></script>
     <script type="text/javascript" src="/javascript/libs/popper.min.js"></script>
     <script type="text/javascript" src="/javascript/libs/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="/javascript/setting.js"></script>
     <script type="text/javascript" src="/javascript/add/arecord.js"></script>
-    <script type="text/javascript" src="/javascript/add/mxrecord.js"></script>
+    <script type="module" src="/javascript/add/mxrecord.js"></script>
+    <script type="module" src="/javascript/add/cnamerecord.js"></script>
+    <script type="module" src="/javascript/add/srvrecord.js"></script>
+    <script type="module" src="/javascript/add/txtrecord.js"></script>
     <script type="module" src="/javascript/mainView/records.js"></script>
 
     <script type="module" src="/javascript/sort/sortMainRecord.js"></script>

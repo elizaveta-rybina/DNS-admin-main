@@ -22,9 +22,12 @@ export function srvHelper(responce) {
           <button class="setting">
             <i class="fa-solid fa-pencil" style="color: #000000;"></i>
           </button>
-          <button class="delete">
-            <i class="fa-solid fa-trash" style="color: #000000;"></i>
-          </button>
+          <form id="openDeleteModal">
+						<input type="hidden" name="${row.id}" value="${row.id}">
+						<button type="submit" class="btnDelete" data-toggle="modal" data-target="#deleteRecordForm">
+              <i class="fa-solid fa-trash" style="color: #000000;"></i>
+						</button>
+					</form>
         </div>
 			</div>
 		`);

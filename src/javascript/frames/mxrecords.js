@@ -1,10 +1,10 @@
 "use strict";
 
-export function mxHelper(responce) {
+export function mxHelper(response) {
 
 	let wrapper = $('<div class="form-wrapper"></div>');
 
-	responce.forEach((row) => {
+	response.forEach((row) => {
 		wrapper.append(`
       <div class="form-body">
         <div class="type">
@@ -18,9 +18,12 @@ export function mxHelper(responce) {
           <button class="setting">
             <i class="fa-solid fa-pencil" style="color: #000000;"></i>
           </button>
-          <button class="delete">
-            <i class="fa-solid fa-trash" style="color: #000000;"></i>
-          </button>
+          <form id="openDeleteModal">
+						<input type="hidden" name="${row.id}" value="${row.id}">
+						<button type="submit" class="btnDelete" data-toggle="modal" data-target="#deleteRecordForm">
+              <i class="fa-solid fa-trash" style="color: #000000;"></i>
+						</button>
+					</form>
         </div>
       </div>
     `);

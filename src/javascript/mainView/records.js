@@ -9,6 +9,8 @@ import { a4Helper } from '../frames/a4records.js';
 import { srvHelper } from '../frames/srvrecords.js';
 import { cnameHelper } from '../frames/cnamerecords.js';
 
+import { deleteRecords } from '../delete/records.js';
+
 $(document).ready(function() {
   //ARecord
 	getRecord(
@@ -58,6 +60,22 @@ $(document).ready(function() {
 		},
   'cnamerecord');
 
-  //Изменение значений для А записи
+  //Удаление DNS-записи
+  $('#records').on('submit', '#openDeleteModal', function(e){
+    e.preventDefault();
+    var values = $('#openDeleteModal').serializeArray();
 
+    $('#deleteRecordFormA').submit(function() {
+      var value = values[0].value;
+      var name = values[0].name;
+      deleteRecords(
+        function(){
+          $('#records').remove(aHelper([{name: name}]));
+        },
+        value, 'arecord'
+      )
+      $('#openDeleteModal').modal('hide');
+      location. reload()
+    });
+  })
 });

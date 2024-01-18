@@ -1,5 +1,7 @@
 'use strict';
 
+import { mxHelper } from "../frames/mxrecords.js";
+
 $(document).ready(function() {
 	$('#exampleModalMXRecord').submit(function(event) {
 		let domainid = new URL(window.location.href).searchParams.get("domainid");
@@ -12,16 +14,16 @@ $(document).ready(function() {
 			success: function (domainName) {
 				var input = $('#MXRecordInput').val();
 				var input_pr = $('#MXRecordInputPr').val();
+        console.log(input);
 				$.ajax({
 					type: 'GET',
 					url: '../php/add/mxrecord.php',
-					data: { domainid: domainid, ip: input, priority: input_pr},
+					data: { domainid: domainid, value: input, priority: input_pr},
 					success: function() {
-						$.getScript("../javascript/frames/mxrecords.js", function () {
-							$("#records").prepend(mxHelper([{priority: input_pr, ip: input}], JSON.parse(domainName).name));
-						});
+							$("#records").prepend(mxHelper([{priority: input_pr, value: input}], JSON.parse(domainName).name));
 					}
 				});
+        location. reload();
 			}
 		});
 	});
