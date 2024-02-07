@@ -5,29 +5,30 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link type="text/css" rel="stylesheet" href="../css/style_setting.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css"/>
   <link rel="stylesheet" href="../css/style_main.css" />
   <title>Main page</title>
 </head>
 <body>
   <div class="container-main">
-    <div class="returnDomains">
-      <img src="../image/left.png">
-      <form action="admin_panel.html" class="returnDomainText">
-        <button>Вернуться обратно</button>
-      </form>
-    </div>
-    <h1 class="page-title">Работа с доменами подразделений университета</h1>
+    <h1 class="page-title">Администрирование</h1>
     <div class="container-head">
       <div class="add-domain">
         <i class="fa-solid fa-square-plus" style="color: #000000;"></i>
-        <a class="add-domain-link" href="#" data-toggle="modal" data-target="#AddDomain">Добавить домен</a>
+        <a class="add-domain-link" href="domain.html">Работа с доменами</a>
+      </div>
+      <div class="infoForUsers">
+        <i class="fa-solid fa-user-plus" style="color: #000000;"></i>
+        <a class="add-domain-link" href="editPersonal.html">Работа с пользователями</a>
+      </div>
+      <div class="add-domain zone-file">
+        <i class="fa-solid fa-file" style="color: #000000;"></i>
+        <a class="add-domain-link" href="zone.html">Работа с файлом зоны</a>
       </div>
     </div>
     <div class="main-form">
       <div class="form-head">
-        <h3>Список доменов</h3>
+        <h4>Список доменов</h4>
         <div class="right-side">
           <form class="search-box">
             <div class="row">
@@ -50,9 +51,6 @@
       <div id="domains">
 
       </div>
-    </div>
-    <div class="pagination">
-      <div class="navigator"></div>
     </div>
   </div>
 
@@ -85,43 +83,55 @@
     </div>
   </form>
 
-  <form class="modal fade" id="deleteDomainForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <form class="modal fade" id="domainDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="deleteTitle">Удаление домена</h5>
+          <h6 class="modal-title" id="exampleModalLabel">Вы уверены, что хотите удалить домен?</h6>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          <p id="#nameOfDomain">Вы действительно хотите удалить домен?</p>
+        <div class="modalError">
+          <p id="error" hidden></p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-          <button type="submit" class="btn btn-primary">Удалить</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Нет
+          </button>
+          <button type="sumbit" class="btn btn-primary" id="deleteDomain">
+            Да
+          </button>
         </div>
       </div>
     </div>
   </form>
 
-  <!-- Модальное окно -->
-  <form class="modal fade" id="changeNameOfDomain" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <form class="modal fade" id="changeNameOfDomain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Изменение имени домена</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Редактирование имени домена</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <p>Введите новое имя:</p>
-          <input type="text" id="changeNameInput" value="">
+          <p>Название домена:</p>
+          <input id="domainInput" class="form-control" type="text" name="Domain">
+        </div>
+        <div class="modalError">
+          <p id="error" hidden></p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-          <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Отменить
+          </button>
+          <button type="sumbit" class="btn btn-primary" id="changeNameButton">
+            Изменить
+          </button>
         </div>
       </div>
     </div>
@@ -135,7 +145,7 @@
 
   <script type="text/javascript" src="../javascript/autocomplete.js"></script>
   <script type="module" src="../javascript/search/adminSearch.js"></script>
-  <script type="module" src="/javascript/sort/adminSort.js"></script>
+  <script type="module" src="../javascript/sort/adminSort.js"></script>
 
   <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 

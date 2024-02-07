@@ -10,7 +10,7 @@ const btn = document.getElementsByClassName("sortByName")[0];
 $(document).ready(function(){
   $(".sortByName").click(function(){
     if (btn.classList == "sortByName"){
-      sort.getDomainSort(
+      sort.getDataZones(
         function(response)
         {
           $('#domains').html(domain.domainHelper(response));
@@ -20,7 +20,7 @@ $(document).ready(function(){
     );
     }
     else{
-      sort.getDomainSortDesc(
+      sort.getDataSortZonesDesc(
         function(response)
         {
           $('#domains').html(domain.domainHelper(response));

@@ -1,7 +1,10 @@
 'use strict'
 
-import { getJson as domainSearchJson } from '../get/searchMain.js';
-import { domainHelper as domainsCreateView} from '../frames/admin.js';
+import Domains from '../class/domains.js';
+const domains = new Domains();
+
+import Users from '../class/users.js';
+const userClass = new Users();
 
 $(document).ready(function()
 {
@@ -10,10 +13,10 @@ $(document).ready(function()
 		event.preventDefault();
 
     var searchInput = $('#inputBox').val();
-		domainSearchJson(searchInput, function(json)
+		userClass.getJson(searchInput, function(json)
 		{
       $('#domains').html("");
-			$('#domains').append(domainsCreateView(json));
+			$('#domains').append(domains.domainHelper(json));
 		});
 	});
 });

@@ -1,62 +1,56 @@
 "use strict";
 
-import { getDataSort } from '../get/sortGetRecords.js';
-import { getDataSortDesc } from '../get/sortGetRecords.js';
-import { getRecord } from '../get/records.js';
-
-import { aHelper } from '../frames/arecords.js';
-import { mxHelper } from '../frames/mxrecords.js';
-import { txtHelper } from '../frames/txtrecords.js';
-import { a4Helper } from '../frames/a4records.js';
-import { srvHelper } from '../frames/srvrecords.js';
-import { cnameHelper } from '../frames/cnamerecords.js';
+import Sort from '../class/sort.js';
+import Records from '../class/records.js';
+const records = new Records();
+const sort = new Sort();
 
 const btn = document.getElementsByClassName("sortByTTL")[0];
 
 $(document).ready(function(){
   $(".sortByTTL").click(function(){
     if (btn.classList == "sortByTTL"){
-      getDataSort(
+      sort.getDataSort(
         function(response)
         {
-            $('#records').html(srvHelper(response));
+            $('#records').html(records.srvHelper(response));
 
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(aHelper(response));
+                $('#records').append(records.aHelper(response));
               },
             'arecord');
 
             //MXRecord
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(mxHelper(response));
+                $('#records').append(records.mxHelper(response));
               },
             'mxrecord');
 
             //TXTRecord
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(txtHelper(response));
+                $('#records').append(records.txtHelper(response));
               },
             'txtrecord');
 
             //A4Record
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(a4Helper(response));
+                $('#records').append(records.a4Helper(response));
               },
             'a4record');
 
             //CNAMERecord
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(cnameHelper(response));
+                $('#records').append(records.cnameHelper(response));
               },
             'cnamerecord');
             btn.classList.remove("sortByTTL");
@@ -65,47 +59,47 @@ $(document).ready(function(){
     );
     }
     else{
-      getDataSortDesc(
+      sort.getDataSortDesc(
         function(response)
         {
-            $('#records').html(srvHelper(response));
+            $('#records').html(records.srvHelper(response));
 
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(aHelper(response));
+                $('#records').append(records.aHelper(response));
               },
             'arecord');
 
             //MXRecord
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(mxHelper(response));
+                $('#records').append(records.mxHelper(response));
               },
             'mxrecord');
 
             //TXTRecord
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(txtHelper(response));
+                $('#records').append(records.txtHelper(response));
               },
             'txtrecord');
 
             //A4Record
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(a4Helper(response));
+                $('#records').append(records.a4Helper(response));
               },
             'a4record');
 
             //CNAMERecord
-            getRecord(
+            records.getRecord(
               function(response)
               {
-                $('#records').append(cnameHelper(response));
+                $('#records').append(records.cnameHelper(response));
               },
             'cnamerecord');
             btn.classList.remove("sortByTTLDesc");

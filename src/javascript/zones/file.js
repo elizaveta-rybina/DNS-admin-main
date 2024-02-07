@@ -1,6 +1,7 @@
 "use strict";
 
-import { zoneErrorHelper } from '../frames/zoneError.js';
+import Zona from "../class/zona.js";
+const zona = new Zona();
 
 $(document).ready(function() {
   const myForm = document.getElementById('addFileZone');
@@ -27,7 +28,7 @@ $(document).ready(function() {
     return response.json();
     }).then(function(data) {
       console.log(data);
-      $('.error').append(zoneErrorHelper(data));
+      $('.error').append(zona.zonaErrorHelper(data));
       const errorDiv = document.querySelector('.error-title');
       errorDiv.style.display = 'block';
     }).catch(error => {console.error(error)});

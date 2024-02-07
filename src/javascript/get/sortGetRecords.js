@@ -1,10 +1,11 @@
 "use strict";
 
-import { getDomainId } from "../getDomainInfo.js";
-import { getDomainName } from "../getDomainInfo.js";
+import Admin from '../class/admin.js'
 
-var domain_id = getDomainId();
-var domain_name = getDomainName();
+const adminClass = new Admin();
+
+var domain_id = adminClass.getDomainId();
+var domain_name = adminClass.getDomainName();
 
 export function getDataSort(callback){
   $.ajax({
